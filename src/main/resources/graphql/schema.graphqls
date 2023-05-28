@@ -1,0 +1,22 @@
+type Query {
+    allShoppers: [Shopper],
+    shopperById(id: Int): Shopper
+
+}
+
+type Shopper {
+    id: Int,
+    name: String,
+    email: String,
+}
+
+type Mutation {
+    createShopper(shopper:ShopperRequest):Shopper
+}
+
+input ShopperRequest {
+    name: String,
+    email: String
+
+}
+

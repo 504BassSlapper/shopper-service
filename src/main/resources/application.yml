@@ -3,6 +3,9 @@ spring:
     name: shopper-service
   datasource:
     url: jdbc:h2:mem:shopper-db
+  graphql:
+    graphiql:
+      enabled: true
   h2:
     console:
       enabled: true
