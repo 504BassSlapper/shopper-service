@@ -1,4 +1,4 @@
-package net.mbo.shopperservice.web;
+package net.mbo.shopperservice.web.rest;
 
 import net.mbo.shopperservice.entities.Shopper;
 import net.mbo.shopperservice.repositories.ShopperRepository;

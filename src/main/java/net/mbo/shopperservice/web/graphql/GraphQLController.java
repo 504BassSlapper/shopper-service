@@ -1,4 +1,4 @@
-package net.mbo.shopperservice.web;
+package net.mbo.shopperservice.web.graphql;
 
 
 import net.mbo.shopperservice.dto.ShopperRequest;
