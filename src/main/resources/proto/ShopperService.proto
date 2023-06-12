@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_package="net.mbo.shopperservice.stub";
+
+service ShopperService {
+  rpc GetShopperRequest(GetAllShopperRequest) returns (GetShopperResponse);
+  rpc GetShopperById(GetShopperByIdRequest) returns (GetShopperByIdResponse);
+}
+
+message GetAllShopperRequest{}
+message GetShopperResponse{
+  repeated Shopper shoppers = 1;
+}
+message Shopper{
+  int64  id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message GetShopperByIdRequest{
+  int64 customerId = 1;
+}
+message GetShopperByIdResponse{
+  Shopper shopper = 1;
+}
