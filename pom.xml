@@ -149,7 +149,6 @@
                             <includeMavenTypes>direct</includeMavenTypes>
                             <inputDirectories>
                                 <include>src/main/resources</include>
-
                             </inputDirectories>
                             <outputTargets>
                                 <outputTarget>
