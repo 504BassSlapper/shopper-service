@@ -1,10 +1,11 @@
 syntax = "proto3";
 
-option java_package="net.mbo.shopperservice.stub";
+option java_package = "net.mbo.shopperservice.stub";
 
 service ShopperService {
-  rpc GetShopperRequest(GetAllShopperRequest) returns (GetShopperResponse);
-  rpc GetShopperById(GetShopperByIdRequest) returns (GetShopperByIdResponse);
+  rpc getShopperRequest(GetAllShopperRequest) returns (GetShopperResponse);
+  rpc getShopperById(GetShopperByIdRequest) returns (GetShopperByIdResponse);
+  rpc saveShopper(SaveShopperRequest) returns (SaveShopperResponse);
 }
 
 message GetAllShopperRequest{}
@@ -21,5 +22,18 @@ message GetShopperByIdRequest{
   int64 customerId = 1;
 }
 message GetShopperByIdResponse{
+  Shopper shopper = 1;
+}
+
+message SaveShopperRequest{
+  ShopperRequest shopperRequest = 1;
+}
+
+message ShopperRequest{
+  string name = 1;
+  string email = 2;
+
+}
+message SaveShopperResponse{
   Shopper shopper = 1;
 }

@@ -3108,6 +3108,1956 @@ public final class ShopperServiceOuterClass {
 
   }
 
+  public interface SaveShopperRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SaveShopperRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     * @return Whether the shopperRequest field is set.
+     */
+    boolean hasShopperRequest();
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     * @return The shopperRequest.
+     */
+    net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getShopperRequest();
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     */
+    net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder getShopperRequestOrBuilder();
+  }
+  /**
+   * Protobuf type {@code SaveShopperRequest}
+   */
+  public  static final class SaveShopperRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SaveShopperRequest)
+      SaveShopperRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SaveShopperRequest.newBuilder() to construct.
+    private SaveShopperRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SaveShopperRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SaveShopperRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SaveShopperRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder subBuilder = null;
+              if (shopperRequest_ != null) {
+                subBuilder = shopperRequest_.toBuilder();
+              }
+              shopperRequest_ = input.readMessage(net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shopperRequest_);
+                shopperRequest_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.Builder.class);
+    }
+
+    public static final int SHOPPERREQUEST_FIELD_NUMBER = 1;
+    private net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest shopperRequest_;
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     * @return Whether the shopperRequest field is set.
+     */
+    public boolean hasShopperRequest() {
+      return shopperRequest_ != null;
+    }
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     * @return The shopperRequest.
+     */
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getShopperRequest() {
+      return shopperRequest_ == null ? net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.getDefaultInstance() : shopperRequest_;
+    }
+    /**
+     * <code>.ShopperRequest shopperRequest = 1;</code>
+     */
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder getShopperRequestOrBuilder() {
+      return getShopperRequest();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (shopperRequest_ != null) {
+        output.writeMessage(1, getShopperRequest());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (shopperRequest_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getShopperRequest());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest)) {
+        return super.equals(obj);
+      }
+      net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest other = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest) obj;
+
+      if (hasShopperRequest() != other.hasShopperRequest()) return false;
+      if (hasShopperRequest()) {
+        if (!getShopperRequest()
+            .equals(other.getShopperRequest())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasShopperRequest()) {
+        hash = (37 * hash) + SHOPPERREQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getShopperRequest().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SaveShopperRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SaveShopperRequest)
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.Builder.class);
+      }
+
+      // Construct using net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (shopperRequestBuilder_ == null) {
+          shopperRequest_ = null;
+        } else {
+          shopperRequest_ = null;
+          shopperRequestBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest getDefaultInstanceForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest build() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest buildPartial() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest result = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest(this);
+        if (shopperRequestBuilder_ == null) {
+          result.shopperRequest_ = shopperRequest_;
+        } else {
+          result.shopperRequest_ = shopperRequestBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest) {
+          return mergeFrom((net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest other) {
+        if (other == net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.getDefaultInstance()) return this;
+        if (other.hasShopperRequest()) {
+          mergeShopperRequest(other.getShopperRequest());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest shopperRequest_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder> shopperRequestBuilder_;
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       * @return Whether the shopperRequest field is set.
+       */
+      public boolean hasShopperRequest() {
+        return shopperRequestBuilder_ != null || shopperRequest_ != null;
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       * @return The shopperRequest.
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getShopperRequest() {
+        if (shopperRequestBuilder_ == null) {
+          return shopperRequest_ == null ? net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.getDefaultInstance() : shopperRequest_;
+        } else {
+          return shopperRequestBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public Builder setShopperRequest(net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest value) {
+        if (shopperRequestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shopperRequest_ = value;
+          onChanged();
+        } else {
+          shopperRequestBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public Builder setShopperRequest(
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder builderForValue) {
+        if (shopperRequestBuilder_ == null) {
+          shopperRequest_ = builderForValue.build();
+          onChanged();
+        } else {
+          shopperRequestBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public Builder mergeShopperRequest(net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest value) {
+        if (shopperRequestBuilder_ == null) {
+          if (shopperRequest_ != null) {
+            shopperRequest_ =
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.newBuilder(shopperRequest_).mergeFrom(value).buildPartial();
+          } else {
+            shopperRequest_ = value;
+          }
+          onChanged();
+        } else {
+          shopperRequestBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public Builder clearShopperRequest() {
+        if (shopperRequestBuilder_ == null) {
+          shopperRequest_ = null;
+          onChanged();
+        } else {
+          shopperRequest_ = null;
+          shopperRequestBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder getShopperRequestBuilder() {
+        
+        onChanged();
+        return getShopperRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder getShopperRequestOrBuilder() {
+        if (shopperRequestBuilder_ != null) {
+          return shopperRequestBuilder_.getMessageOrBuilder();
+        } else {
+          return shopperRequest_ == null ?
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.getDefaultInstance() : shopperRequest_;
+        }
+      }
+      /**
+       * <code>.ShopperRequest shopperRequest = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder> 
+          getShopperRequestFieldBuilder() {
+        if (shopperRequestBuilder_ == null) {
+          shopperRequestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder>(
+                  getShopperRequest(),
+                  getParentForChildren(),
+                  isClean());
+          shopperRequest_ = null;
+        }
+        return shopperRequestBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SaveShopperRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:SaveShopperRequest)
+    private static final net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest();
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SaveShopperRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SaveShopperRequest>() {
+      @java.lang.Override
+      public SaveShopperRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SaveShopperRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SaveShopperRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SaveShopperRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShopperRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ShopperRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string email = 2;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 2;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code ShopperRequest}
+   */
+  public  static final class ShopperRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ShopperRequest)
+      ShopperRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShopperRequest.newBuilder() to construct.
+    private ShopperRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShopperRequest() {
+      name_ = "";
+      email_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShopperRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShopperRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_ShopperRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_ShopperRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 2;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 2;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, email_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, email_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest)) {
+        return super.equals(obj);
+      }
+      net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest other = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ShopperRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ShopperRequest)
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_ShopperRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_ShopperRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.Builder.class);
+      }
+
+      // Construct using net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        email_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_ShopperRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getDefaultInstanceForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest build() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest buildPartial() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest result = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest(this);
+        result.name_ = name_;
+        result.email_ = email_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest) {
+          return mergeFrom((net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest other) {
+        if (other == net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 2;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 2;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ShopperRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ShopperRequest)
+    private static final net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest();
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShopperRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ShopperRequest>() {
+      @java.lang.Override
+      public ShopperRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShopperRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShopperRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShopperRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SaveShopperResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SaveShopperResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     * @return Whether the shopper field is set.
+     */
+    boolean hasShopper();
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     * @return The shopper.
+     */
+    net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper getShopper();
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     */
+    net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder getShopperOrBuilder();
+  }
+  /**
+   * Protobuf type {@code SaveShopperResponse}
+   */
+  public  static final class SaveShopperResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SaveShopperResponse)
+      SaveShopperResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SaveShopperResponse.newBuilder() to construct.
+    private SaveShopperResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SaveShopperResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SaveShopperResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SaveShopperResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder subBuilder = null;
+              if (shopper_ != null) {
+                subBuilder = shopper_.toBuilder();
+              }
+              shopper_ = input.readMessage(net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shopper_);
+                shopper_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.Builder.class);
+    }
+
+    public static final int SHOPPER_FIELD_NUMBER = 1;
+    private net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper shopper_;
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     * @return Whether the shopper field is set.
+     */
+    public boolean hasShopper() {
+      return shopper_ != null;
+    }
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     * @return The shopper.
+     */
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper getShopper() {
+      return shopper_ == null ? net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.getDefaultInstance() : shopper_;
+    }
+    /**
+     * <code>.Shopper shopper = 1;</code>
+     */
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder getShopperOrBuilder() {
+      return getShopper();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (shopper_ != null) {
+        output.writeMessage(1, getShopper());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (shopper_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getShopper());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse)) {
+        return super.equals(obj);
+      }
+      net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse other = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse) obj;
+
+      if (hasShopper() != other.hasShopper()) return false;
+      if (hasShopper()) {
+        if (!getShopper()
+            .equals(other.getShopper())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasShopper()) {
+        hash = (37 * hash) + SHOPPER_FIELD_NUMBER;
+        hash = (53 * hash) + getShopper().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SaveShopperResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SaveShopperResponse)
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.class, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.Builder.class);
+      }
+
+      // Construct using net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (shopperBuilder_ == null) {
+          shopper_ = null;
+        } else {
+          shopper_ = null;
+          shopperBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.internal_static_SaveShopperResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse getDefaultInstanceForType() {
+        return net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse build() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse buildPartial() {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse result = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse(this);
+        if (shopperBuilder_ == null) {
+          result.shopper_ = shopper_;
+        } else {
+          result.shopper_ = shopperBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse) {
+          return mergeFrom((net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse other) {
+        if (other == net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.getDefaultInstance()) return this;
+        if (other.hasShopper()) {
+          mergeShopper(other.getShopper());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper shopper_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper, net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder> shopperBuilder_;
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       * @return Whether the shopper field is set.
+       */
+      public boolean hasShopper() {
+        return shopperBuilder_ != null || shopper_ != null;
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       * @return The shopper.
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper getShopper() {
+        if (shopperBuilder_ == null) {
+          return shopper_ == null ? net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.getDefaultInstance() : shopper_;
+        } else {
+          return shopperBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public Builder setShopper(net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper value) {
+        if (shopperBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shopper_ = value;
+          onChanged();
+        } else {
+          shopperBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public Builder setShopper(
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder builderForValue) {
+        if (shopperBuilder_ == null) {
+          shopper_ = builderForValue.build();
+          onChanged();
+        } else {
+          shopperBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public Builder mergeShopper(net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper value) {
+        if (shopperBuilder_ == null) {
+          if (shopper_ != null) {
+            shopper_ =
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.newBuilder(shopper_).mergeFrom(value).buildPartial();
+          } else {
+            shopper_ = value;
+          }
+          onChanged();
+        } else {
+          shopperBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public Builder clearShopper() {
+        if (shopperBuilder_ == null) {
+          shopper_ = null;
+          onChanged();
+        } else {
+          shopper_ = null;
+          shopperBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder getShopperBuilder() {
+        
+        onChanged();
+        return getShopperFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      public net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder getShopperOrBuilder() {
+        if (shopperBuilder_ != null) {
+          return shopperBuilder_.getMessageOrBuilder();
+        } else {
+          return shopper_ == null ?
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.getDefaultInstance() : shopper_;
+        }
+      }
+      /**
+       * <code>.Shopper shopper = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper, net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder> 
+          getShopperFieldBuilder() {
+        if (shopperBuilder_ == null) {
+          shopperBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper, net.mbo.shopperservice.stub.ShopperServiceOuterClass.Shopper.Builder, net.mbo.shopperservice.stub.ShopperServiceOuterClass.ShopperOrBuilder>(
+                  getShopper(),
+                  getParentForChildren(),
+                  isClean());
+          shopper_ = null;
+        }
+        return shopperBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SaveShopperResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:SaveShopperResponse)
+    private static final net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse();
+    }
+
+    public static net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SaveShopperResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SaveShopperResponse>() {
+      @java.lang.Override
+      public SaveShopperResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SaveShopperResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SaveShopperResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SaveShopperResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_GetAllShopperRequest_descriptor;
   private static final 
@@ -3133,6 +5083,21 @@ public final class ShopperServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetShopperByIdResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SaveShopperRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SaveShopperRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ShopperRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ShopperRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SaveShopperResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SaveShopperResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3148,11 +5113,17 @@ public final class ShopperServiceOuterClass {
       "\014\n\004name\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\"+\n\025GetShopp" +
       "erByIdRequest\022\022\n\ncustomerId\030\001 \001(\003\"3\n\026Get" +
       "ShopperByIdResponse\022\031\n\007shopper\030\001 \001(\0132\010.S" +
-      "hopper2\224\001\n\016ShopperService\022?\n\021GetShopperR" +
+      "hopper\"=\n\022SaveShopperRequest\022\'\n\016shopperR" +
+      "equest\030\001 \001(\0132\017.ShopperRequest\"-\n\016Shopper" +
+      "Request\022\014\n\004name\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\"0\n\023" +
+      "SaveShopperResponse\022\031\n\007shopper\030\001 \001(\0132\010.S" +
+      "hopper2\316\001\n\016ShopperService\022?\n\021getShopperR" +
       "equest\022\025.GetAllShopperRequest\032\023.GetShopp" +
-      "erResponse\022A\n\016GetShopperById\022\026.GetShoppe" +
-      "rByIdRequest\032\027.GetShopperByIdResponseB\035\n" +
-      "\033net.mbo.shopperservice.stubb\006proto3"
+      "erResponse\022A\n\016getShopperById\022\026.GetShoppe" +
+      "rByIdRequest\032\027.GetShopperByIdResponse\0228\n" +
+      "\013saveShopper\022\023.SaveShopperRequest\032\024.Save" +
+      "ShopperResponseB\035\n\033net.mbo.shopperservic" +
+      "e.stubb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3187,6 +5158,24 @@ public final class ShopperServiceOuterClass {
     internal_static_GetShopperByIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetShopperByIdResponse_descriptor,
+        new java.lang.String[] { "Shopper", });
+    internal_static_SaveShopperRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_SaveShopperRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SaveShopperRequest_descriptor,
+        new java.lang.String[] { "ShopperRequest", });
+    internal_static_ShopperRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_ShopperRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ShopperRequest_descriptor,
+        new java.lang.String[] { "Name", "Email", });
+    internal_static_SaveShopperResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_SaveShopperResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SaveShopperResponse_descriptor,
         new java.lang.String[] { "Shopper", });
   }
 

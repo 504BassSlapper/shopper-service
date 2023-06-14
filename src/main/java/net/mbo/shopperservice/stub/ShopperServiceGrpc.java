@@ -31,7 +31,7 @@ public final class ShopperServiceGrpc {
       net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperResponse> getGetShopperRequestMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetShopperRequest",
+      fullMethodName = SERVICE_NAME + '/' + "getShopperRequest",
       requestType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetAllShopperRequest.class,
       responseType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -45,13 +45,13 @@ public final class ShopperServiceGrpc {
               io.grpc.MethodDescriptor.<net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetAllShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "ShopperService", "GetShopperRequest"))
+                  "ShopperService", "getShopperRequest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetAllShopperRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShopperServiceMethodDescriptorSupplier("GetShopperRequest"))
+                  .setSchemaDescriptor(new ShopperServiceMethodDescriptorSupplier("getShopperRequest"))
                   .build();
           }
         }
@@ -63,7 +63,7 @@ public final class ShopperServiceGrpc {
       net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse> getGetShopperByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetShopperById",
+      fullMethodName = SERVICE_NAME + '/' + "getShopperById",
       requestType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest.class,
       responseType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -77,18 +77,50 @@ public final class ShopperServiceGrpc {
               io.grpc.MethodDescriptor.<net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "ShopperService", "GetShopperById"))
+                  "ShopperService", "getShopperById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new ShopperServiceMethodDescriptorSupplier("GetShopperById"))
+                  .setSchemaDescriptor(new ShopperServiceMethodDescriptorSupplier("getShopperById"))
                   .build();
           }
         }
      }
      return getGetShopperByIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest,
+      net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> getSaveShopperMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "saveShopper",
+      requestType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.class,
+      responseType = net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest,
+      net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> getSaveShopperMethod() {
+    io.grpc.MethodDescriptor<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> getSaveShopperMethod;
+    if ((getSaveShopperMethod = ShopperServiceGrpc.getSaveShopperMethod) == null) {
+      synchronized (ShopperServiceGrpc.class) {
+        if ((getSaveShopperMethod = ShopperServiceGrpc.getSaveShopperMethod) == null) {
+          ShopperServiceGrpc.getSaveShopperMethod = getSaveShopperMethod = 
+              io.grpc.MethodDescriptor.<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest, net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "ShopperService", "saveShopper"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ShopperServiceMethodDescriptorSupplier("saveShopper"))
+                  .build();
+          }
+        }
+     }
+     return getSaveShopperMethod;
   }
 
   /**
@@ -132,6 +164,13 @@ public final class ShopperServiceGrpc {
       asyncUnimplementedUnaryCall(getGetShopperByIdMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void saveShopper(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest request,
+        io.grpc.stub.StreamObserver<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getSaveShopperMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class ShopperServiceGrpc {
                 net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest,
                 net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse>(
                   this, METHODID_GET_SHOPPER_BY_ID)))
+          .addMethod(
+            getSaveShopperMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest,
+                net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse>(
+                  this, METHODID_SAVE_SHOPPER)))
           .build();
     }
   }
@@ -185,6 +231,14 @@ public final class ShopperServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetShopperByIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void saveShopper(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest request,
+        io.grpc.stub.StreamObserver<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSaveShopperMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -217,6 +271,13 @@ public final class ShopperServiceGrpc {
     public net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse getShopperById(net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetShopperByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse saveShopper(net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSaveShopperMethod(), getCallOptions(), request);
     }
   }
 
@@ -253,10 +314,19 @@ public final class ShopperServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetShopperByIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse> saveShopper(
+        net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSaveShopperMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_SHOPPER_REQUEST = 0;
   private static final int METHODID_GET_SHOPPER_BY_ID = 1;
+  private static final int METHODID_SAVE_SHOPPER = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +352,10 @@ public final class ShopperServiceGrpc {
         case METHODID_GET_SHOPPER_BY_ID:
           serviceImpl.getShopperById((net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdRequest) request,
               (io.grpc.stub.StreamObserver<net.mbo.shopperservice.stub.ShopperServiceOuterClass.GetShopperByIdResponse>) responseObserver);
+          break;
+        case METHODID_SAVE_SHOPPER:
+          serviceImpl.saveShopper((net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperRequest) request,
+              (io.grpc.stub.StreamObserver<net.mbo.shopperservice.stub.ShopperServiceOuterClass.SaveShopperResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -346,6 +420,7 @@ public final class ShopperServiceGrpc {
               .setSchemaDescriptor(new ShopperServiceFileDescriptorSupplier())
               .addMethod(getGetShopperRequestMethod())
               .addMethod(getGetShopperByIdMethod())
+              .addMethod(getSaveShopperMethod())
               .build();
         }
       }
