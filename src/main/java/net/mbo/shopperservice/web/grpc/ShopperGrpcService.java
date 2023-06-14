@@ -45,5 +45,10 @@ public class ShopperGrpcService extends ShopperServiceGrpc.ShopperServiceImplBas
     @Override
     public void saveShopper(ShopperServiceOuterClass.SaveShopperRequest request, StreamObserver<ShopperServiceOuterClass.SaveShopperResponse> responseObserver) {
         Shopper shopper = shopperMapper.mapGrpcShopperRequest(request.getShopperRequest());
+        Shopper shopperResponse = shopperRepository.save(shopper);
+        ShopperServiceOuterClass.SaveShopperResponse saveShopperResponse = ShopperServiceOuterClass.SaveShopperResponse
+                .newBuilder().setShopper(shopperMapper.mapGrpcShopperFromEntity(shopperResponse)).build();
+        responseObserver.onNext(saveShopperResponse);
+        responseObserver.onCompleted();
     }
 }
